@@ -10,3 +10,7 @@
 ## [v0.2.0] - 2025-02-25
 ### Added
     added "opensource resource" page
+
+## [v0.3.0] - 2025-02-26
+### Added
+    added "diploma" page

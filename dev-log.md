@@ -31,3 +31,10 @@
 
 ### References
 - none
+
+## [2025-02-26]
+### Changes Made
+- added diploma page & example diploma
+
+### References
+- none
