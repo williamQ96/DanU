@@ -6,10 +6,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="William" content="404">
+    <meta name="William" content="Resources">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>404</title>
+    <title>about</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -26,19 +26,41 @@
 
    
 
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>Where Every Right Answer is a Step Closer to Graduation.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
-      <div class="container">
-          <div class="row">
-              <div class="col-12">
-                  <nav class="main-nav">
-                      <!-- ***** Logo Start ***** -->
-                      <a href="index.html" class="logo">
-                          Dan University
-                      </a>
-                      <!-- ***** Logo End ***** -->
-                      <!-- ***** Menu Start ***** -->
-                      <ul class="nav">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        Dan University   
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="404.html">UnderConstruction</a></li>
                         <li class="scroll-to-section"><a href="#apply">Apply Now</a></li>
@@ -54,43 +76,37 @@
                         <li class="scroll-to-section"><a href="#courses">Courses</a></li> 
                         <li class="scroll-to-section"><a href="#contact">Contact Us</a></li> 
                     </ul>        
-                      <!-- ***** Menu End ***** -->
-                  </nav>
-              </div>
-          </div>
-      </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-
-  <section class="heading-page header-text" id="top">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h6>Hi!</h6>
-          <h2>Comming Soon!</h2>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="meetings-page" id="meetings">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-12">
-              <div class="filters">
-              </div>
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
             </div>
-            <div class="col-lg-12">
+        </div>
+    </div>
+</header>
+<!-- ***** Header Area End ***** -->  
+
+<section class="meetings-page" id="meetings">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-lg-12">
+              <div class="down-content">
+                <div id="changelog-content">
+                  <!-- Changelog content will be inserted here -->
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
     <div class="footer">
-      <p>Copyright © 2025 Dan University. All Rights Reserved. 
-      </p>
+      <p>Copyright © 2025 Dan U, Ltd. All Rights Reserved. </p>
     </div>
   </section>
 
@@ -108,6 +124,7 @@
     <script src="assets/js/video.js"></script>
     <script src="assets/js/slick-slider.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         //according to loftblog tut
         $('.nav li:first').addClass('active');
@@ -153,6 +170,13 @@
         $(window).scroll(function () {
           checkSection();
         });
+        async function loadChangelog() {
+            const response = await fetch("changelog.md");
+            const text = await response.text();
+            document.getElementById("changelog-content").innerHTML = `<div style="color: white;">${marked.parse(text)}</div>`;
+        }
+
+        loadChangelog();
     </script>
 </body>
 
