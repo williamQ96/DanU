@@ -38,3 +38,10 @@
 
 ### References
 - none
+
+## [2025-02-27]
+### Changes Made
+- added more real resources
+
+### Next Steps
+- resource page layout fix.

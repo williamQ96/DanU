@@ -921,6 +921,8 @@ section.upcoming-meetings .categories .main-button-red a {
 
 .meeting-item {
   margin-bottom: 30px;
+  width: 375px; /* Set a fixed width */
+  height: 300px; /* Set a fixed height */
 }
 
 .meeting-item .thumb {
@@ -931,6 +933,7 @@ section.upcoming-meetings .categories .main-button-red a {
   border-top-right-radius: 20px;
   border-top-left-radius: 20px;
 }
+
 
 .meeting-item .thumb .price {
   position: absolute;
