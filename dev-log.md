@@ -45,3 +45,10 @@
 
 ### Next Steps
 - resource page layout fix.
+
+## [2025-02-27]
+### Changes Made
+- gradute button and list
+
+### Next Steps
+- maybe database
